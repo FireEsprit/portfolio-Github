@@ -1,0 +1,412 @@
+/* 🌌 Nouveau style inspiré de Space Leads */
+
+/* 🔥 Fond dégradé spatial avec effet parallaxe */
+body {
+    background: linear-gradient(135deg, #0d0d2b, #1b1b3a);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-attachment: fixed;
+	min-height: 100vh; /* S'assure que la page prend toute la hauteur */
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1; /* Permet au contenu principal de pousser le footer en bas */
+    padding-bottom: 100px; /* Ajoute un espace sous la page */
+}
+
+/* 🌠 Navbar futuriste avec effet glassmorphism */
+nav {
+    background: rgba(20, 20, 50, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s;
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s;
+    padding: 8px 15px;
+    border-radius: 5px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: white;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* 📝 Section contenu avec meilleure hiérarchie */
+section {
+    padding: 120px 10% 50px;
+    text-align: center;
+}
+
+/* 🏷️ Titres lisibles et bien alignés */
+h1 {
+    color: #ffffff;
+    font-weight: 600;
+    position: relative;
+    z-index: 10;
+    margin-top: 80px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* ✨ Boutons futuristes */
+button, .btn {
+    background: linear-gradient(135deg, #3a3aff, #8a2be2);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover, .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(138, 43, 226, 0.8);
+}
+
+/* 🎧 Ajout d'une animation pour le fond sonore */
+@keyframes fadeInAudio {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+audio {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.8;
+    animation: fadeInAudio 2s ease-in-out;
+}
+
+/* 🏁 Footer futuriste */
+footer {
+    background: rgba(15, 15, 40, 0.9);
+    padding: 15px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 📱 Responsive amélioré */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    button, .btn {
+        width: 100%;
+    }
+    h1 {
+        margin-top: 100px;
+    }
+}
+#toggle-music {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+#toggle-music:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+/* 🎨 Style pour la présentation */
+#presentation {
+    text-align: center;
+    padding: 50px;
+}
+
+.presentation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.profil-img {
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.presentation-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+/* 🎵 Style pour la section Spotify */
+#spotify-section {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #0d0d2b, #1b1b3a);
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.spotify-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+iframe {
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+/* 🎵 Bouton pour ouvrir la musique */
+#open-music {
+    background: linear-gradient(135deg, #3a3aff, #8a2be2);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+#open-music:hover {
+    transform: translateY(-3px);
+}
+
+/* 🎵 Section musicale plus petite */
+#spotify-section {
+    text-align: center;
+    padding: 40px 10%;
+}
+
+#open-music {
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+/* 🎡 Modal Musique */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #1b1b3a;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    width: 500px;
+	height: 250px;
+}
+/* 🎵 Augmenter la taille de l'iframe musicale */
+#music-frame {
+    width: 600px;
+    height: 200px;
+}
+
+/* 🎵 Ajuster la taille du texte */
+#music-title {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* 🎵 Musique - Carrousel */
+.carousel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.prev, .next {
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.prev:hover, .next:hover {
+    background: lightgray;
+}
+
+#music-title {
+    color: white;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* 📄 Section CV */
+#cv-section {
+    text-align: center;
+    background: linear-gradient(135deg, #0d0d2b, #1b1b3a);
+    padding: 50px 10%;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+#cv-section h2 {
+    color: white;
+}
+
+#cv-section p {
+    color: #ccc;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #3a3aff, #8a2be2);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* 🎡 Carrousel */
+.carousel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.prev, .next {
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.prev:hover, .next:hover {
+    background: lightgray;
+}
+/* 📦 Conteneur des options */
+.options-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.option {
+    width: 45%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.option:hover {
+    transform: scale(1.05);
+}
+
+/* 📊 Schéma avec effet d'apparition */
+#schema {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* 🎢 Animation des compétences */
+#progress-animation {
+    width: 60%;
+    margin: 20px auto;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #3a3aff, #8a2be2);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    width: 0;
+    transition: width 1s ease-in-out;
+}

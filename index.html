@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link id="theme-style" rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Mon Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="stage.html">Stages</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="veille.html">Veille Technologique</a></li>
+                <li><a href="bts.html">BTS SIO</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="presentation">
+        <h2>Bienvenue sur mon portfolio</h2>
+        <div class="presentation-container">
+            <img src="assets/images/photo_profil.jpg" alt="Photo de profil" class="profil-img">
+            <div class="presentation-text">
+                <p>Je suis <strong>Hugo Gouveia-Fernandes</strong>, étudiant en BTS SIO.</p>
+                <p>Passionné par l'informatique et le développement, je vous invite à découvrir mon parcours et mes réalisations.</p>
+            </div>
+        </div>
+    </section>
+
+    <main> <!-- ✅ Ajout d'une section pour pousser le footer vers le bas -->
+        <section id="spotify-section">
+            <h2>🎵 Inspirations musicales</h2>
+            <button id="open-music">🎶 Ouvrir la playlist</button>
+
+            <div id="music-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="carousel">
+                        <button class="prev">⬅️</button>
+                        <iframe id="music-frame" frameborder="0" allowfullscreen></iframe>
+                        <button class="next">➡️</button>
+                    </div>
+                    <p id="music-title"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cv-section">
+            <h2>📄 Mon CV</h2>
+            <p>Téléchargez mon CV en cliquant sur le bouton ci-dessous.</p>
+            <a href="assets/docs/CV_Hugo_GFernandes.pdf" download class="btn">📥 Télécharger mon CV</a>
+        </section>
+    </main> <!-- ✅ Fin du main -->
+<audio id="bg-music" src="assets/audio/reincarnated.mp3" loop></audio>
+    <button id="toggle-music">🔇</button>
+    <footer>
+        <p>&copy; 2025 - Mon Portfolio</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
