@@ -410,3 +410,152 @@ iframe {
     width: 0;
     transition: width 1s ease-in-out;
 }
+
+/* SECTION PROJETS */
+
+.projects-section{
+    padding:120px 10%;
+    text-align:center;
+}
+
+.projects-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:40px;
+    margin-top:50px;
+}
+
+/* CARTE PROJET */
+
+.project-card{
+    background:rgba(255,255,255,0.05);
+    border-radius:12px;
+    padding:30px;
+    backdrop-filter:blur(10px);
+    transition:0.3s;
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
+
+.project-card h3{
+    margin-bottom:15px;
+}
+
+.project-card p{
+    font-size:14px;
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+/* BOUTON */
+
+.project-card .btn{
+    display:inline-block;
+    padding:10px 18px;
+    border-radius:6px;
+    background:linear-gradient(135deg,#3a3aff,#8a2be2);
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.project-card .btn:hover{
+    transform:scale(1.05);
+}
+.projects-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr); /* 3 projets par ligne */
+    gap:40px;
+    margin-top:50px;
+}
+
+a{
+    color:#8a9cff;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+a:hover{
+    color:white;
+}
+
+.veille-articles{
+margin-top:40px;
+}
+
+.article-card{
+
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:10px;
+margin-bottom:25px;
+transition:0.3s;
+
+}
+
+.article-card:hover{
+
+transform:translateY(-5px);
+
+}
+
+
+/* LOGOS */
+
+.logo-tech{
+width:120px;
+margin-top:15px;
+}
+
+
+/* TIMELINE */
+
+.timeline-section{
+margin-top:40px;
+}
+
+.timeline{
+position:relative;
+margin-top:40px;
+padding-left:40px;
+border-left:3px solid rgba(255,255,255,0.2);
+}
+
+.timeline-item{
+margin-bottom:40px;
+position:relative;
+}
+
+.timeline-date{
+font-weight:bold;
+margin-bottom:10px;
+color:#8a9cff;
+}
+
+.timeline-content{
+background:rgba(255,255,255,0.05);
+padding:20px;
+border-radius:8px;
+transition:0.3s;
+}
+
+.timeline-content:hover{
+transform:translateX(5px);
+}
+
+.logo-tech{
+width:480px;
+margin:30px auto;
+display:block;
+opacity:0.9;
+transition:transform 0.3s ease;
+}
+
+.logo-tech:hover{
+transform:scale(1.05);
+}
